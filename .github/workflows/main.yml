@@ -1,18 +1,20 @@
+
 name: Multiple Steps
 
-on: 
- push:
-   branches: [ main ]
+on:
+  push:
+    branches: [ main ]
 
-  jobs:
-    Practice:
-         run-on: ubuntu-latest
+jobs:
+  demo:
+    runs-on: ubuntu-latest
 
- 
-     steps:
-     - name: Step-1 Greetings
-       run: echo "Hello Devops"
-     - name: step-2 Current Date
-       run: date
-     - name: step-3 Working Directory
-       run: pwd
+    steps:
+      - name: Step 1 - Greeting
+        run: echo "Hello Devops"
+
+      - name: Step 2 - Current Date
+        run: date
+
+      - name: Step 3 - Working Directory
+        run: pwd
